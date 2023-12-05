@@ -1,7 +1,7 @@
-const ListHeader =() => {
+const ListHeader =({ListName}) => {
     return (
       <div >
-    
+        {ListName}
       </div>
     );
   }
