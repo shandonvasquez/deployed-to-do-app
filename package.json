@@ -14,3 +14,6 @@
     "if-env": "^1.0.4"
   }
 }
+
+
+//if the pkg.json is updated, run npm i but fist modifited the packetes on this such s nodemons, express, etc.  
