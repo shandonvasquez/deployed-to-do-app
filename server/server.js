@@ -11,6 +11,6 @@ app.listen(PORT, () => 'server is running on port ${PORT}')
 //WE have to take all the inf and
 
 
-
+hashd
 
  // on the carpet of servier run with npm run start but you have to be on server with cd server//
