@@ -8,3 +8,5 @@ const pool = new Pool({
     port: 5434,
     database: 'todoapp'
 })
+
+module.exports = pool;
