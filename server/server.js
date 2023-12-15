@@ -3,11 +3,11 @@ const express = require("express")
 const app = express()
 
 //get all todos
-app.get('/todos', (req, res) => {
+app.get('/todos', async (req, res) => {
     try{
 //await
-    }catch(error){
-        console.log(error)
+    }catch(err){
+        console.log(err)
     
 
     }
