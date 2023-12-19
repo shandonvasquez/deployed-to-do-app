@@ -1,12 +1,14 @@
 import ListHeader from './components/ListHeader'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const App =() => {
-
+  const userEmail = 'shandon1915211@gmail.com'
+    const [ tasks, setTasks ] = useState(null)
+    
   const getData = async () => {
-    const userEmail = 'shandon1915211@gmail.com'
+  
     try {
-      const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${userEmail}`)
+      const response = await fetch(`http://localhost:8000/todos${userEmail}`)
       const json = await response.json()
       //setTasks(json)
       console.log(json)
