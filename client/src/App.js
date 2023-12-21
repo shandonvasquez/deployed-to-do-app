@@ -12,12 +12,14 @@ const App =() => {
       const json = await response.json()
       //setTasks(json)
       console.log(json)
+      setTasks(json)
     } catch (err) {
       console.error(err)
     }
   } 
 
   useEffect(() =>  getData  , [])
+  console.log(tasks)
 
 
   return (
