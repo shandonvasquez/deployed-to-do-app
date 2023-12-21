@@ -31,7 +31,7 @@ const sortedTask = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date))
   return (
     <div className="app" >
       <ListHeader ListName={"Holiday tick list"}/>
-      {sortedTask?.map(<ListItem/>)}
+      {sortedTask?.map((task) => <ListItem key={task.id} task={task} />)}
     </div>
 
 
