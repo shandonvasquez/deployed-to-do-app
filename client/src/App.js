@@ -1,4 +1,5 @@
 import ListHeader from './components/ListHeader'
+import ListItem from './components/ListItem'
 import { useEffect, useState } from 'react'
 
 const App =() => {
@@ -22,7 +23,7 @@ const App =() => {
   console.log(tasks)
 
 //sort by date
-tasks?.sort((a, b) => new Date(a.date) - new Date(b.date))
+const sortedTask = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date))
 
 
 
@@ -30,6 +31,7 @@ tasks?.sort((a, b) => new Date(a.date) - new Date(b.date))
   return (
     <div className="app" >
       <ListHeader ListName={"Holiday tick list"}/>
+      {sortedTask?.map(<ListItem/>)}
     </div>
 
 
