@@ -12,6 +12,7 @@ const ListItem =({task}) => {
     </div>
 
    </li>
-  }
+  
+    );}
   
   export default ListItem;
