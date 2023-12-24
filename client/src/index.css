@@ -29,6 +29,12 @@ body {
   border-radius: 12px;
   background-color: transparent;
 }
+
+.edit{
+  border: 1.5px solid rgb(141, 181, 145);
+  color: rgb(141, 181, 145);
+  background-color: transparent;
+}
 /*List Header*/
 .list-header {
   width: 100%;
@@ -57,4 +63,5 @@ body {
   stroke-miterlimit: 10;
   stroke-width: 32px;
 }
+
 
