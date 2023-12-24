@@ -45,6 +45,13 @@ body {
   color: rgb(255, 255, 255);
   background-color: rgb(141, 181, 145);
 }
+
+.delete {
+  border: 1.5px solid rgb(255, 175, 163 );
+  color: rgb(255, 175, 163 );
+  background-color: uppercase;
+}
+
 /*List Header*/
 .list-header {
   width: 100%;
