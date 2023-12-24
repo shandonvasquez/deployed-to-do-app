@@ -47,9 +47,10 @@ body {
   justify-content: space-between;
 }
 
-.list-item .tick{
+ .tick{
   fill:none;
   stroke: black;
   stroke-miterlimit: 10;
   stroke-width: 32px;
 }
+
