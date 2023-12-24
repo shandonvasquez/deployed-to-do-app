@@ -47,7 +47,11 @@ body {
   justify-content: space-between;
 }
 
- .tick{
+.tick {
+  padding: 10px;
+}
+
+ .tick path{
   fill:none;
   stroke: black;
   stroke-miterlimit: 10;
