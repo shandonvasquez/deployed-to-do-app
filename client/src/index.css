@@ -35,6 +35,16 @@ body {
   color: rgb(141, 181, 145);
   background-color: transparent;
 }
+
+.edit:hover{
+  background-color: rgb(182, 223, 186);
+  
+}
+.edit:active {
+  border: 1.5px solid rgb(141, 181, 145);
+  color: rgb(255, 255, 255);
+  background-color: rgb(141, 181, 145);
+}
 /*List Header*/
 .list-header {
   width: 100%;
