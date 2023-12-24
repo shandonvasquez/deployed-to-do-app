@@ -1,6 +1,8 @@
+
 const ListItem =({task}) => {
     return (
    <li className="list-item">
+
     <div className="info-container">
       <TickIcon/>
       <p className="task-title">{task.title}</p>
