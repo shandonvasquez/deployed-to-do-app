@@ -1,8 +1,13 @@
 const Modal =() => {
+  const mode = 'create';s
     return (
-      <div >
-    
+   <div className="overlay">     
+    <div className="modal">
+      <div>
+        <h3>Let's {mode} create you task</h3>
       </div>
+      </div>
+   </div>
     );
   }
   
