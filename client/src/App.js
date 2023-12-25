@@ -1,6 +1,8 @@
 import ListHeader from './components/ListHeader';
 import ListItem from './components/ListItem';
 import { useEffect, useState } from 'react';
+import TickIcon from './components/TickIcon';
+import ProgressBar from './components/ProgressBar';
 
 const App = () => {
   const userEmail = 'shandon1915211@gmail.com';
@@ -14,7 +16,8 @@ const App = () => {
     } catch (err) {
       console.error(err);
     }
-  };
+  }
+  this is the only commiene t for the fasy
 
   useEffect(() => {
     getData();
