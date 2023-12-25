@@ -13,8 +13,14 @@ const [data, setData] = useState({
 })
  
 
-  const handleChange = () => {
-    console.log("changing"  );
+  const handleChange = (e) => {
+    console.log("changing" + e );
+    const {name, value} = e.target; 
+
+    setData(data => ({
+      ...data,
+      [name]: value
+    }))
   }
     return (
    <div className="overlay">     
