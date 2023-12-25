@@ -79,12 +79,12 @@ color: rgb(255, 255, 255);
 
 .signout {
   border: 1.5px solid rgb(255, 175, 163);
-  background-color: rgb(255, 175, 163);
+  background-color: rgb(255, 175, 163) !important;
   color: rgb(234, 234, 234);
 }
 
 .signout:hover{
- background-color: rgb(175,94, 94);
+ background-color: rgb(175,94, 94)  !important;
  border: 1.5px solid rgb(175,94, 94);
 }
 
