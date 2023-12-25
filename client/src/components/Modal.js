@@ -22,6 +22,9 @@ const [data, setData] = useState({
       [name]: value
     }))
   }
+  console.log(data);
+
+
     return (
    <div className="overlay">     
     <div className="modal">
@@ -35,7 +38,7 @@ const [data, setData] = useState({
         maxlength={30}
         plasholder="Your task goes"
         name="title"
-        value= {""}
+        value= {data.tittle}
         onChange={handleChange}
         />
         <br/>
