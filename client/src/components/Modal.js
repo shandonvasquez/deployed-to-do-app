@@ -22,6 +22,7 @@ const Modal =() => {
         onChange={handleChange}
         />
         <br/>
+        <label>Drag to select your current progress</label>
         <input
         required
         type="range"
