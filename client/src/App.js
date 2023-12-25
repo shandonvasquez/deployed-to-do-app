@@ -17,7 +17,7 @@ const App = () => {
       console.error(err);
     }
   }
-  this is the only commiene t for the fasy
+  
 
   useEffect(() => {
     getData();
