@@ -88,6 +88,12 @@ color: rgb(255, 255, 255);
  border: 1.5px solid rgb(175,94, 94);
 }
 
+.signout:active {
+
+border: 1.5px solid rgb(175, 81, 81) !important;
+background-color: rgb(175, 81, 81) !important;
+color: rgb(255, 255, 255);  
+}
 /*List Header*/
 .list-header {
   width: 100%;
