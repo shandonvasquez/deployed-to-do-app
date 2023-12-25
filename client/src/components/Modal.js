@@ -14,8 +14,20 @@ const Modal =() => {
         required
         maxlength={30}
         plasholder="Your task goes"
+        name="title"
+        value= {""}
+        onChange={handleChange}
         />
-        <input/>
+        <br/>
+        <input
+        required
+        type="range"
+        min="0"
+        max="100"
+        name="progress"
+        value= {""}
+        onChange={handleChange}
+        />
         <input type="submit"/>
 
       </form>
