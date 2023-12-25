@@ -85,6 +85,7 @@ color: rgb(255, 255, 255);
 
 .signout:hover{
  background-color: rgb(175,94, 94);
+ border: 1.5px solid rgb(175,94, 94);
 }
 
 /*List Header*/
