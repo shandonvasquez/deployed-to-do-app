@@ -15,7 +15,7 @@ const ListItem =({task}) => {
       <ProgressBar/>
     </div>
     <div className="button-container">
-      <button className="edit" >EDIT</button>
+      <button className="edit" onClick={() => setShowModal(true)} >EDIT</button>
       <button className="delete">DELETE</button>
     </div>
       {showModal && <Modal/>}
