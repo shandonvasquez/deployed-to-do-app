@@ -7,6 +7,8 @@ const pool = require('./db')
 
 //get all todos
 app.use(cors())
+app.use(express.json())
+
 app.get('/todos/:userEmail', async (req, res) => {
     const  {userEmail}  = req.params
     try {
