@@ -1,7 +1,9 @@
 import TickIcon from './TickIcon';
 import ProgressBar from './ProgressBar';
 import { useState } from 'react';
+
 const ListItem =({task}) => {
+  const [showModal, setShowModal] = useState(false);
     return (
    <li className="list-item">
 
