@@ -10,8 +10,15 @@ const Modal = ({ mode, setShowModal, task }) => {
     title: editMode ? task.title : null,
     progress: editMode ? task.progress : 50,
     date: editMode ? '' : new Date(),
-  });
+  })
 
+  const postData = () =>{
+    try{
+      fetch()
+    } catch(err){
+     console.log(err) 
+    }
+  }
   const handleChange = (e) => {
     const { name, value } = e.target;
 

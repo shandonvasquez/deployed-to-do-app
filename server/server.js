@@ -16,6 +16,17 @@ app.get('/todos/:userEmail', async (req, res) => {
     }
   })
 
+//create a new todo
+app.post('/todos',  (req, res) => {
+  try{
+    pool.query('INSERT INTO todos (id, user_email, title, progress, date) VALUES ($1, $2, $3, $4, $5 )', [req.body.title, req.body.progress, req.body.user_email])
+  } catch(err){
+    console.log(err)
+  }
+})
+
+
+
 app.listen(PORT, () => console.log (`Server is running on port ${PORT}`))
 
 
