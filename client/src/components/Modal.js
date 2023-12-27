@@ -6,7 +6,7 @@ const Modal = ({ mode, setShowModal, task }) => {
   const editMode = mode === 'edit' ? true : false;
 
   const [data, setData] = useState({
-    user_email: editMode ? task.user_email : null , // Added 'user_email' field
+    user_email: editMode ? task.user_email : 'bob@test.com' , // Added 'user_email' field
     title: editMode ? task.title : null,
     progress: editMode ? task.progress : 50,
     date: editMode ? '' : new Date(),
