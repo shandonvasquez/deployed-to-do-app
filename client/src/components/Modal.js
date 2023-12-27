@@ -1,7 +1,7 @@
 
 import {useState} from 'react';
 
-const Modal =() => {
+const Modal =( mode, setShowModal) => {
 const mode = 'create';
 const editMode = mode === "edit" ? true : false;
 
