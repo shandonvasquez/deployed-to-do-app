@@ -30,7 +30,7 @@ const [data, setData] = useState({
     <div className="modal">
       <div className="form-tittle-container">
         <h3>Let's {mode} create you task</h3>
-        <button>X</button>
+        <button onClick={() => setShowModal(false)} > x</button>
       </div>
       <form>
         <input
