@@ -12,7 +12,8 @@ const Modal = ({ mode, setShowModal, task }) => {
     date: editMode ? '' : new Date(),
   })
 
-  const postData = async () =>{
+  const postData = async (e) =>{
+    e.preventDefault()  
     try{
       const response = await fetch('http://localhost:8000/todos', {
         method: 'POST',
