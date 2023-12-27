@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Modal = ({ mode, setShowModal, task }) => {
+const Modal = ({ mode, setShowModal, getData, task }) => {
   const defaultMode = 'create'; // Renamed the variable 'mode'
 
   const editMode = mode === 'edit' ? true : false;
@@ -20,7 +20,11 @@ const Modal = ({ mode, setShowModal, task }) => {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
       })
-      console.log(response)
+      if(response.status === 200){
+        console.log('success')
+        setShowModal(false)
+        getData
+      }
     } catch(err){
      console.log(err) 
     }
