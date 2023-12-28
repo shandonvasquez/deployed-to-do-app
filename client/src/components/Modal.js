@@ -29,6 +29,20 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
      console.log(err) 
     }
   }
+ 
+  const editData = async (e) =>{
+    e.preventDefault()  
+    try{
+   
+      }
+    
+     catch(err){
+     console.log(err) 
+    }
+  }
+
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -66,7 +80,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
             value={data.progress}
             onChange={handleChange}
           />
-          <input className={mode} type="submit" onClick={editMode ? '':postData}/>
+          <input className={mode} type="submit" onClick={editMode ? editData :postData}/>
         </form>
       </div>
     </div>
