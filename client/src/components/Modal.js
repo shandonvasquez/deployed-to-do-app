@@ -9,7 +9,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
     user_email: editMode ? task.user_email : 'shandon1915211@gmail.com' , // Added 'user_email' field
     title: editMode ? task.title : null,
     progress: editMode ? task.progress : 50,
-    date: editMode ? '' : new Date(),
+    date: editMode ? task.date : new Date(),
   })
 
   const postData = async (e) =>{
@@ -34,6 +34,9 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
     e.preventDefault()  
     try{
          await fetch(`http://localhost:8000/todos/${task.id}` )
+         method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
       }
     
      catch(err){
