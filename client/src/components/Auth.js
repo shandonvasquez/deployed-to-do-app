@@ -7,8 +7,7 @@ const Auth =() => {
         <h2>{isLogin ? 'Please log in' : 'Please sing up!'}</h2>
           <input type="email" placeholder="email"></input>
           <input type="password" placeholder="password"></input>
-          <input type="password" placeholder= "confirm password" ></input>
-       
+          {!isLogin &&           <input type="password" placeholder= "confirm password" ></input>} 
         </form>
        </div>
       </div>
