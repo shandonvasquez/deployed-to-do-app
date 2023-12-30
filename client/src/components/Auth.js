@@ -1,4 +1,5 @@
 const Auth =() => {
+  const [error, setError] = useState(null);
   const isLogin = false;
     return (
       <div className="auth-container">
