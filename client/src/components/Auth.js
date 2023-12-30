@@ -9,6 +9,7 @@ const Auth =() => {
           <input type="password" placeholder="password"></input>
           {!isLogin &&           <input type="password" placeholder= "confirm password" ></input>} 
         <input type="submit" className="create"/>
+        <p></p>
         </form>
        </div>
       </div>
