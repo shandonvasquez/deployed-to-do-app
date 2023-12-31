@@ -14,6 +14,10 @@ const Auth =() => {
         {error && <p className="error">{error}</p>} 
         <p></p>
         </form>
+        <div className='auth-options'>
+          <button>Sing Up</button>
+          <button>Login</button>
+        </div>
        </div>
       </div>
     );
