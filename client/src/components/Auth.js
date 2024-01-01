@@ -3,7 +3,7 @@ const Auth =() => {
   const [error, setError] = useState(null);
   const isLogin = false;
     return (
-      uasdjkfj
+      
       <div className="auth-container">
        <div className="auth-container-box">
        <form>
