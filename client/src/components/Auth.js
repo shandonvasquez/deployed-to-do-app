@@ -24,7 +24,7 @@ const Auth =() => {
         <div className='auth-options'>
           <button onClick={() => viewLogin(false)} >
             Sing Up</button>
-            
+            style={{backgroundColor: !isLogIn}}
           <button onClick={() => viewLogin(true)}>
             Login</button>
         </div>
