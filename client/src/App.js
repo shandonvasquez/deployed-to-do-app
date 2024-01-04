@@ -1,38 +1,49 @@
-import ListHeader from './components/ListHeader';
-import ListItem from './components/ListItem';
-import { useEffect, useState } from 'react';
-import TickIcon from './components/TickIcon';
-import ProgressBar from './components/ProgressBar';
+import ListHeader from './components/ListHeader'
+import ListItem from './components/ListItem'
+import Auth from './components/Auth'
+import { useEffect, useState } from 'react'
+import { useCookies } from 'react-cookie'
 
 const App = () => {
-  const userEmail = 'shandon1915211@gmail.com';
-  const [tasks, setTasks] = useState([]);
+  const [cookies, setCookie, removeCookie] = useCookies(null)
+  const authToken = cookies.AuthToken
+  const userEmail = cookies.Email
+  const [ tasks, setTasks] = useState(null)
 
   const getData = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_SERVERURL} {userEmail}`);
-      const json = await response.json();
-      setTasks(json);
+      const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${userEmail}`)
+      const json = await response.json()
+      setTasks(json)
     } catch (err) {
-      console.error(err);
+      console.error(err)
     }
   }
-  
 
   useEffect(() => {
-    getData();
-  }, []);
+    if (authToken) {
+      getData()
+    }}
+  , [])
 
-  // Sort tasks only when tasks have been fetched and are not null
-  const sortedTasks = tasks.length > 0 ? [...tasks].sort((a, b) => new Date(a.date) - new Date(b.date)) : [];
+  console.log(tasks)
+
+  //Sort by date
+  const sortedTasks = tasks?.sort((a,b) => new Date(a.date) - new Date(b.date))
+
 
   return (
     <div className="app">
-      <ListHeader ListName={"Holiday tick list"} getData={getData} />
-      {sortedTasks?.map((task) =><ListItem key={task.id} task={task} getData={getData} />)}       )}
+      {!authToken && <Auth/>}
+      {authToken &&
+        <>
+        <ListHeader listName={'🏝️ Holiday tick list'} getData={getData} />
+        <p className="user-email">Welcome back {userEmail}</p>
+        {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData} />)}
+        </>}
+      <p className="copyright">© Creative Coding LLC</p>
     </div>
-  );
-};
+  )
+}
 
-export default App;
-
+export default App
